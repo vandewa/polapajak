@@ -11,14 +11,9 @@ function TaxIcon({ size = 26 }: { size?: number }) {
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
       <rect x="4" y="9" width="24" height="14" rx="2" fill="#fff" />
       <text
-        x="16"
-        y="19.5"
-        textAnchor="middle"
+        x="16" y="19.5" textAnchor="middle"
         fontFamily="system-ui, -apple-system, 'Plus Jakarta Sans', sans-serif"
-        fontSize="9"
-        fontWeight="900"
-        fill="#15803D"
-        letterSpacing="0.6"
+        fontSize="9" fontWeight="900" fill="#15803D" letterSpacing="0.6"
       >
         TAX
       </text>
@@ -27,96 +22,83 @@ function TaxIcon({ size = 26 }: { size?: number }) {
 }
 
 type IconComp = LucideIcon | ComponentType<{ size?: number }>
-
 const iconMap: Record<string, IconComp> = {
-  FileText,
-  Calculator: TaxIcon,
-  BookOpen,
-  BarChart3,
-  Users,
-  ClipboardList,
+  FileText, Calculator: TaxIcon, BookOpen, BarChart3, Users, ClipboardList,
 }
 
 export default function Layanan() {
   return (
     <section id="layanan" className="section-pad">
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="text-center mb-12">
-          <span className="eyebrow block">Layanan Kami</span>
+        <div className="text-center mb-14">
+          <span className="eyebrow">Layanan Kami</span>
           <h2
-            className="mt-3 font-extrabold tracking-tight inline-block relative"
-            style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', color: '#0F172A' }}
+            className="display title-underline mt-3"
+            style={{ fontSize: 'clamp(1.85rem, 3.4vw, 2.6rem)', color: '#0F172A' }}
           >
             Solusi Pajak &amp; Keuangan yang Anda Butuhkan
-            <span
-              className="absolute left-1/2 -bottom-2 h-[3px] rounded-full"
-              style={{
-                width: 56,
-                transform: 'translateX(-50%)',
-                background: 'linear-gradient(90deg,#16A34A,#22C55E)',
-              }}
-            />
           </h2>
+          <p
+            className="mt-7 mx-auto leading-relaxed"
+            style={{ color: '#64748B', fontSize: 14.5, maxWidth: 600 }}
+          >
+            Layanan terintegrasi yang dirancang untuk efisiensi, kepatuhan, dan pertumbuhan bisnis berkelanjutan.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
-          {layananData.map((s) => {
+          {layananData.map((s, idx) => {
             const Icon = iconMap[s.icon] ?? FileText
             return (
               <article
                 key={s.id}
-                className="rounded-2xl bg-white flex flex-col items-center text-center transition-all hover:-translate-y-1"
+                className="glass glass-hover rounded-2xl flex flex-col items-center text-center fade-in-up"
                 style={{
-                  border: '1px solid #EFF2F5',
-                  boxShadow:
-                    '0 1px 2px rgba(15,23,42,0.03), 0 6px 16px rgba(15,23,42,0.04)',
-                  padding: '1.75rem 1.25rem 1.25rem',
+                  padding: '1.75rem 1.1rem 1.25rem',
+                  animationDelay: `${idx * 60}ms`,
                 }}
               >
-                {/* Solid dark green icon circle, no halo */}
                 <div
-                  className="rounded-full flex items-center justify-center mb-5"
+                  className="rounded-full flex items-center justify-center mb-5 relative"
                   style={{
-                    width: 66,
-                    height: 66,
-                    background: '#15803D',
+                    width: 64,
+                    height: 64,
+                    background: 'linear-gradient(135deg,#16A34A 0%,#15803D 100%)',
+                    border: '1px solid rgba(255,255,255,0.30)',
                     boxShadow:
-                      '0 6px 14px rgba(21,128,61,0.18), inset 0 1px 0 rgba(255,255,255,0.14)',
+                      '0 1px 0 rgba(255,255,255,0.40) inset, 0 8px 18px rgba(22,163,74,0.30)',
                   }}
                 >
-                  <Icon size={26} color="#fff" strokeWidth={2.2} />
+                  <Icon size={26} color="#fff" strokeWidth={2.1} />
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    style={{
+                      background:
+                        'radial-gradient(circle at 30% 25%, rgba(255,255,255,0.45), transparent 60%)',
+                    }}
+                  />
                 </div>
 
-                <h3
-                  className="font-bold mb-3"
-                  style={{ color: '#0F172A', fontSize: 15.5, lineHeight: 1.25 }}
-                >
+                <h3 className="font-bold mb-2" style={{ color: '#0F172A', fontSize: 15.5, lineHeight: 1.25 }}>
                   {s.title}
                 </h3>
 
-                <ul className="flex flex-col gap-1.5 mb-5 w-full">
+                <ul className="flex flex-col gap-1 mb-5 w-full">
                   {s.items.map((it) => (
-                    <li
-                      key={it}
-                      style={{ color: '#64748B', fontSize: 13, lineHeight: 1.4 }}
-                    >
-                      {it}
-                    </li>
+                    <li key={it} style={{ color: '#64748B', fontSize: 12.5, lineHeight: 1.4 }}>{it}</li>
                   ))}
                 </ul>
 
-                <div
-                  className="w-full pt-3 mt-auto"
-                  style={{ borderTop: '1px solid #F1F5F9' }}
-                >
+                <div className="w-full pt-3 mt-auto" style={{ borderTop: '1px solid rgba(15,23,42,0.06)' }}>
                   <a
                     href="#kontak"
                     className="inline-flex items-center gap-1.5 font-semibold transition-colors"
-                    style={{ color: '#16A34A', fontSize: 13 }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#15803D')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#16A34A')}
+                    style={{ color: '#15803D', fontSize: 12.5 }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#16A34A')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = '#15803D')}
                   >
-                    Selengkapnya <ArrowRight size={14} />
+                    Selengkapnya <ArrowRight size={13} />
                   </a>
                 </div>
               </article>

@@ -16,66 +16,76 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+      className="fixed inset-x-0 top-0 z-50 transition-all duration-500"
       style={{
-        background: scrolled ? 'rgba(255,255,255,0.92)' : 'rgba(255,255,255,0.78)',
-        backdropFilter: 'blur(16px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-        borderBottom: scrolled ? '1px solid rgba(15,23,42,0.06)' : '1px solid transparent',
-        boxShadow: scrolled ? '0 4px 24px rgba(15,23,42,0.04)' : 'none',
+        paddingTop: scrolled ? 14 : 18,
       }}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="flex items-center justify-between h-[68px]">
-          <a href="#beranda" aria-label="PolaPajak"><Logo /></a>
+      <div
+        className="mx-auto flex items-center justify-between transition-all duration-500"
+        style={{
+          maxWidth: scrolled ? 1180 : 1280,
+          margin: '0 auto',
+          padding: scrolled ? '10px 20px' : '14px 24px',
+          borderRadius: 999,
+          background: scrolled ? 'rgba(255,255,255,0.78)' : 'rgba(255,255,255,0.55)',
+          backdropFilter: 'blur(22px) saturate(180%)',
+          WebkitBackdropFilter: 'blur(22px) saturate(180%)',
+          border: '1px solid rgba(255,255,255,0.78)',
+          boxShadow: scrolled
+            ? '0 1px 0 rgba(255,255,255,0.95) inset, 0 18px 40px rgba(15,23,42,0.08)'
+            : '0 1px 0 rgba(255,255,255,0.85) inset, 0 8px 24px rgba(15,23,42,0.04)',
+          width: 'calc(100% - 28px)',
+        }}
+      >
+        <a href="#beranda" aria-label="PolaPajak"><Logo /></a>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((l, i) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-[14px] font-medium flex items-center gap-1 transition-colors"
-                style={{ color: '#475569' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#16A34A')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
-              >
-                {l.label}
-                {i === 1 && <ChevronDown size={14} />}
-              </a>
-            ))}
-          </nav>
+        <nav className="hidden md:flex items-center gap-7">
+          {navLinks.map((l, i) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-[13.5px] font-medium flex items-center gap-1 transition-colors"
+              style={{ color: '#475569' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#15803D')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
+            >
+              {l.label}
+              {i === 1 && <ChevronDown size={13} />}
+            </a>
+          ))}
+        </nav>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex btn-primary"
-          >
-            Konsultasi Gratis
-          </a>
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex btn-primary"
+          style={{ padding: '0.7rem 1.25rem', fontSize: 13.5 }}
+        >
+          Konsultasi Gratis
+        </a>
 
-          <button
-            className="md:hidden p-2 rounded-lg"
-            style={{ color: '#0F172A' }}
-            onClick={() => setOpen((v) => !v)}
-            aria-label="menu"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
+        <button
+          className="md:hidden p-2 rounded-full"
+          style={{ color: '#0F172A' }}
+          onClick={() => setOpen((v) => !v)}
+          aria-label="menu"
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
       </div>
 
       {open && (
         <div
-          className="md:hidden border-t flex flex-col gap-3 px-5 py-5"
-          style={{ background: 'rgba(255,255,255,0.96)', borderColor: 'rgba(15,23,42,0.08)' }}
+          className="md:hidden mx-3 mt-2 rounded-2xl flex flex-col gap-2 px-5 py-4 glass-strong"
         >
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium py-1"
+              className="text-sm font-medium py-1.5"
               style={{ color: '#334155' }}
             >
               {l.label}
@@ -85,7 +95,7 @@ export default function Navbar() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary justify-center mt-1"
+            className="btn-primary justify-center mt-2"
           >
             Konsultasi Gratis
           </a>

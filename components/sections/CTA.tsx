@@ -1,40 +1,67 @@
-import { ClipboardCheck, ArrowRight } from 'lucide-react'
+import { ClipboardCheck, ArrowRight, Sparkles } from 'lucide-react'
 import { WA_LINK } from '@/lib/data'
 
 export default function CTA() {
   return (
-    <section className="px-0 sm:px-0 pt-2 pb-0">
+    <section className="px-5 sm:px-8 py-12">
       <div
-        className="relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg,#16A34A 0%,#15803D 100%)',
-        }}
+        className="max-w-7xl mx-auto rounded-[28px] glass-emerald relative overflow-hidden text-white"
+        style={{ padding: '2.4rem 2rem' }}
       >
+        {/* highlight orbs */}
         <div
-          className="pointer-events-none absolute -top-24 -right-12 w-72 h-72 rounded-full"
+          aria-hidden
+          className="absolute -top-28 -left-16 rounded-full pointer-events-none"
           style={{
-            background: 'radial-gradient(circle, rgba(187,247,208,0.30), transparent 70%)',
+            width: 320, height: 320,
+            background: 'radial-gradient(circle, rgba(255,255,255,0.28), transparent 70%)',
             filter: 'blur(40px)',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-7 sm:py-8 grid md:grid-cols-[auto_1fr_auto] items-center gap-5">
+        <div
+          aria-hidden
+          className="absolute -bottom-32 -right-20 rounded-full pointer-events-none"
+          style={{
+            width: 360, height: 360,
+            background: 'radial-gradient(circle, rgba(0,0,0,0.18), transparent 70%)',
+            filter: 'blur(40px)',
+          }}
+        />
+
+        <div className="relative grid md:grid-cols-[auto_1fr_auto] items-center gap-6">
           <div
-            className="hidden md:flex items-center justify-center w-14 h-14 rounded-xl shrink-0"
+            className="hidden md:flex items-center justify-center rounded-2xl shrink-0"
             style={{
-              background: 'rgba(255,255,255,0.16)',
-              border: '1px solid rgba(255,255,255,0.28)',
-              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.18)',
+              width: 60, height: 60,
+              background: 'rgba(255,255,255,0.18)',
+              border: '1px solid rgba(255,255,255,0.30)',
+              boxShadow: '0 1px 0 rgba(255,255,255,0.30) inset',
             }}
           >
             <ClipboardCheck size={26} color="#fff" />
           </div>
 
-          <div className="text-white">
-            <h3 className="font-extrabold tracking-tight" style={{ fontSize: 'clamp(1.15rem, 2vw, 1.45rem)' }}>
-              Siap Kelola Pajak &amp; Keuangan Bisnis Anda dengan Lebih Baik?
+          <div>
+            <span
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold mb-3"
+              style={{
+                background: 'rgba(255,255,255,0.16)',
+                border: '1px solid rgba(255,255,255,0.30)',
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+              }}
+            >
+              <Sparkles size={11} /> Konsultasi Gratis
+            </span>
+            <h3
+              className="display"
+              style={{ fontSize: 'clamp(1.25rem, 2.4vw, 1.7rem)', color: '#fff', lineHeight: 1.15 }}
+            >
+              Siap Kelola Pajak &amp; Keuangan<br className="hidden md:block" />
+              Bisnis Anda dengan Lebih Baik?
             </h3>
-            <p className="mt-1 text-[13px]" style={{ color: 'rgba(255,255,255,0.92)' }}>
-              Konsultasikan kebutuhan Anda sekarang juga. Tim kami siap membantu.
+            <p className="mt-2" style={{ color: 'rgba(255,255,255,0.92)', fontSize: 13.5 }}>
+              Konsultasikan kebutuhan Anda sekarang. Tim kami siap membantu — tanpa biaya awal.
             </p>
           </div>
 
@@ -42,14 +69,16 @@ export default function CTA() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 font-semibold rounded-xl px-5 py-3 transition-transform hover:scale-[1.03]"
+            className="inline-flex items-center gap-2 font-semibold rounded-full transition-transform hover:scale-[1.04]"
             style={{
               background: '#fff',
               color: '#15803D',
-              boxShadow: '0 10px 24px rgba(15,23,42,0.16)',
+              padding: '0.95rem 1.6rem',
+              fontSize: 14,
+              boxShadow: '0 14px 28px rgba(0,0,0,0.18), 0 1px 0 rgba(255,255,255,0.85) inset',
             }}
           >
-            Konsultasi Gratis Sekarang <ArrowRight size={16} />
+            Mulai Konsultasi <ArrowRight size={15} />
           </a>
         </div>
       </div>
