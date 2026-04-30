@@ -1,0 +1,58 @@
+import { ClipboardCheck, ArrowRight } from 'lucide-react'
+import { WA_LINK } from '@/lib/data'
+
+export default function CTA() {
+  return (
+    <section className="px-0 sm:px-0 pt-2 pb-0">
+      <div
+        className="relative overflow-hidden"
+        style={{
+          background: 'linear-gradient(135deg,#16A34A 0%,#15803D 100%)',
+        }}
+      >
+        <div
+          className="pointer-events-none absolute -top-24 -right-12 w-72 h-72 rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(187,247,208,0.30), transparent 70%)',
+            filter: 'blur(40px)',
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-7 sm:py-8 grid md:grid-cols-[auto_1fr_auto] items-center gap-5">
+          <div
+            className="hidden md:flex items-center justify-center w-14 h-14 rounded-xl shrink-0"
+            style={{
+              background: 'rgba(255,255,255,0.16)',
+              border: '1px solid rgba(255,255,255,0.28)',
+              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.18)',
+            }}
+          >
+            <ClipboardCheck size={26} color="#fff" />
+          </div>
+
+          <div className="text-white">
+            <h3 className="font-extrabold tracking-tight" style={{ fontSize: 'clamp(1.15rem, 2vw, 1.45rem)' }}>
+              Siap Kelola Pajak &amp; Keuangan Bisnis Anda dengan Lebih Baik?
+            </h3>
+            <p className="mt-1 text-[13px]" style={{ color: 'rgba(255,255,255,0.92)' }}>
+              Konsultasikan kebutuhan Anda sekarang juga. Tim kami siap membantu.
+            </p>
+          </div>
+
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold rounded-xl px-5 py-3 transition-transform hover:scale-[1.03]"
+            style={{
+              background: '#fff',
+              color: '#15803D',
+              boxShadow: '0 10px 24px rgba(15,23,42,0.16)',
+            }}
+          >
+            Konsultasi Gratis Sekarang <ArrowRight size={16} />
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
