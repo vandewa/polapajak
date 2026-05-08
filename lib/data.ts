@@ -226,17 +226,17 @@ export const tentangPillars = [
 export const testimoniData = [
   {
     quote:
-      'PolaPajak membantu kami mengelola pajak dengan rapi dan pelaporan keuangan jadi lebih rapi. Timnya responsif dan sangat profesional.',
+      'Polapajak membantu kami mengelola pajak dengan rapi dan pelaporan keuangan jadi lebih rapi. Timnya responsif dan sangat profesional.',
     name: 'Sutrisno', role: 'Managing Partner', company: 'PT Esdea Assistance Management', rating: 5,
   },
   {
     quote:
-      'Layanan PolaPajak Consulting sangat memudahkan kami, mulai dari perhitungan pajak hingga pelaporan pajak bulanan. Sangat direkomendasikan!',
+      'Layanan Polapajak Consulting sangat memudahkan kami, mulai dari perhitungan pajak hingga pelaporan pajak bulanan. Sangat direkomendasikan!',
     name: 'Koko', role: 'Owner Restaurant', company: 'PT Putra Tanjung Komat', rating: 5,
   },
   {
     quote:
-      'Penjelasan jelas, solusi tepat, dan selalu update terkait regulasi terbaru. PolaPajak the best!',
+      'Penjelasan jelas, solusi tepat, dan selalu update terkait regulasi terbaru. Polapajak the best!',
     name: 'Claudika Ega', role: 'Project Manager', company: 'PT Zekon Indonesia', rating: 5,
   },
 ]
