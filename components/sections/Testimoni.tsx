@@ -1,83 +1,85 @@
 'use client'
-import Image from 'next/image'
-import { Star, Quote } from 'lucide-react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Star } from 'lucide-react'
 import { testimoniData } from '@/lib/data'
 
-const avatarUrls = [
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=140&h=140&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=140&h=140&q=80&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=140&h=140&q=80&auto=format&fit=crop',
-]
-
 export default function Testimoni() {
+  const [active, setActive] = useState(0)
+
   return (
-    <section id="testimoni" className="section-pad" style={{ background: '#F8FAFC' }}>
-      <div className="max-w-7xl mx-auto px-5 sm:px-8">
-        <div className="text-center mb-12">
-          <span className="eyebrow block">Testimoni Klien</span>
-          <h2
-            className="mt-3 font-extrabold tracking-tight inline-block relative"
-            style={{ fontSize: 'clamp(1.75rem, 3vw, 2.4rem)', color: '#0F172A' }}
-          >
-            Kepercayaan Klien adalah Prioritas Kami
-            <span
-              className="absolute left-1/2 -bottom-2 h-[3px] rounded-full"
-              style={{ width: 56, transform: 'translateX(-50%)', background: 'linear-gradient(90deg,#16A34A,#22C55E)' }}
-            />
+    <section id="testimoni" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-[#15803D] font-semibold text-sm uppercase tracking-widest mb-3">
+            Testimoni Klien
+          </p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+            Kepercayaan Mereka, Prioritas Kami
           </h2>
+          <div className="w-16 h-1 bg-[#15803D] mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {testimoniData.map((t, i) => (
-            <article key={t.name} className="card-elevated p-6 relative">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+          {testimoniData.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              onClick={() => setActive(i)}
+              className={`bg-white rounded-2xl p-8 shadow-sm border-2 cursor-pointer transition-all flex flex-col h-full ${
+                active === i
+                  ? 'border-[#15803D] shadow-green-100 shadow-lg'
+                  : 'border-transparent hover:border-green-100'
+              }`}
+            >
               <div className="flex items-start justify-between mb-4">
-                <Quote size={26} fill="#16A34A" stroke="#16A34A" />
-                <div className="flex gap-0.5">
-                  {Array.from({ length: t.rating }).map((_, j) => (
+                {/* Large typographic opening quote mark */}
+                <div
+                  className="font-serif font-bold leading-none select-none"
+                  style={{ fontSize: '3.5rem', color: '#15803D', lineHeight: 1 }}
+                  aria-hidden="true"
+                >
+                  &ldquo;
+                </div>
+                <div className="flex gap-0.5 mt-2">
+                  {Array.from({ length: item.rating }).map((_, j) => (
                     <Star key={j} size={14} fill="#FACC15" stroke="#FACC15" />
                   ))}
                 </div>
               </div>
 
-              <p className="text-[14px] leading-relaxed mb-6" style={{ color: '#334155' }}>
-                {t.quote}
+              <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                {item.quote}
               </p>
 
-              <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: '#E2E8F0' }}>
-                <div
-                  className="relative w-11 h-11 rounded-full overflow-hidden shrink-0"
-                  style={{ border: '2px solid #fff', boxShadow: '0 2px 8px rgba(15,23,42,0.10)' }}
-                >
-                  <Image
-                    src={avatarUrls[i % avatarUrls.length]}
-                    alt={t.name}
-                    fill
-                    sizes="44px"
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div>
-                  <p className="text-[13.5px] font-bold" style={{ color: '#0F172A' }}>{t.name}</p>
-                  <p className="text-[11.5px]" style={{ color: '#64748B' }}>
-                    {t.role} · {t.company}
-                  </p>
-                </div>
+              <div className="mt-auto pt-2 border-t border-gray-100">
+                <p className="font-bold text-gray-900 mt-4">{item.name}</p>
+                <p className="text-gray-500 text-sm">{item.role}</p>
+                <p className="text-sm" style={{ color: '#15803D' }}>
+                  {item.company}
+                </p>
               </div>
-            </article>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-8 flex justify-center gap-2">
-          {[0, 1, 2, 3].map((i) => (
-            <span
+        <div className="flex justify-center gap-2">
+          {testimoniData.map((_, i) => (
+            <button
               key={i}
-              className="rounded-full transition-all"
-              style={{
-                width: i === 1 ? 22 : 8,
-                height: 8,
-                background: i === 1 ? '#16A34A' : '#CBD5E1',
-              }}
+              onClick={() => setActive(i)}
+              aria-label={`Testimoni ${i + 1}`}
+              className={`h-2.5 rounded-full transition-all duration-300 ${
+                active === i ? 'w-6' : 'bg-gray-300 w-2.5'
+              }`}
+              style={
+                active === i
+                  ? { background: 'linear-gradient(135deg, #15803D 0%, #22C55E 100%)' }
+                  : {}
+              }
             />
           ))}
         </div>

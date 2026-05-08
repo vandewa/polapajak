@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'PolaPajak Consulting — Konsultan Pajak & Akuntansi Terpercaya',
+  title: 'PolaPajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit Terpercaya',
   description:
     'Solusi pajak, pembukuan, dan pelaporan keuangan yang akurat, tepat waktu, dan sesuai regulasi untuk pertumbuhan bisnis Anda.',
 }

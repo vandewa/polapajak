@@ -7,6 +7,7 @@ import Stats from '@/components/sections/Stats'
 import Proses from '@/components/sections/Proses'
 import TentangKami from '@/components/sections/TentangKami'
 import Testimoni from '@/components/sections/Testimoni'
+import PolaGroup from '@/components/sections/PolaGroup'
 import CTA from '@/components/sections/CTA'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <Proses />
         <TentangKami />
         <Testimoni />
+        <PolaGroup />
         <CTA />
       </main>
       <Footer />

@@ -1,10 +1,12 @@
 'use client'
+import { useState } from 'react'
 import {
   FileText, BookOpen, BarChart3, Users, ClipboardList, ArrowRight,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ComponentType } from 'react'
-import { layananData } from '@/lib/data'
+import { layananData, type Layanan as LayananType } from '@/lib/data'
+import LayananModal from './LayananModal'
 
 function TaxIcon({ size = 26 }: { size?: number }) {
   return (
@@ -38,8 +40,12 @@ const iconMap: Record<string, IconComp> = {
 }
 
 export default function Layanan() {
+  const [active, setActive] = useState<LayananType | null>(null)
+  const ActiveIcon = active ? (iconMap[active.icon] ?? FileText) : null
+
   return (
     <section id="layanan" className="section-pad">
+      <LayananModal service={active} Icon={ActiveIcon} onClose={() => setActive(null)} />
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="text-center mb-12">
           <span className="eyebrow block">Layanan Kami</span>
@@ -109,15 +115,16 @@ export default function Layanan() {
                   className="w-full pt-3 mt-auto"
                   style={{ borderTop: '1px solid #F1F5F9' }}
                 >
-                  <a
-                    href="#kontak"
+                  <button
+                    type="button"
+                    onClick={() => setActive(s)}
                     className="inline-flex items-center gap-1.5 font-semibold transition-colors"
                     style={{ color: '#16A34A', fontSize: 13 }}
                     onMouseEnter={(e) => (e.currentTarget.style.color = '#15803D')}
                     onMouseLeave={(e) => (e.currentTarget.style.color = '#16A34A')}
                   >
                     Selengkapnya <ArrowRight size={14} />
-                  </a>
+                  </button>
                 </div>
               </article>
             )

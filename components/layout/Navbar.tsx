@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react'
 import { navLinks, WA_LINK } from '@/lib/data'
 import Logo from '@/components/layout/Logo'
 
@@ -45,14 +45,16 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex btn-primary"
-          >
-            Konsultasi Gratis
-          </a>
+          <div className="hidden md:block">
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Konsultasi Sekarang <ArrowRight size={16} />
+            </a>
+          </div>
 
           <button
             className="md:hidden p-2 rounded-lg"
@@ -87,7 +89,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary justify-center mt-1"
           >
-            Konsultasi Gratis
+            Konsultasi Sekarang <ArrowRight size={16} />
           </a>
         </div>
       )}

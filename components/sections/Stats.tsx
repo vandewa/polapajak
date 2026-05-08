@@ -1,7 +1,7 @@
-import { Trophy, Users, ShieldCheck, Clock } from 'lucide-react'
+import { Trophy, ClipboardCheck, ShieldCheck, Clock } from 'lucide-react'
 import { statsData } from '@/lib/data'
 
-const icons = [Trophy, Users, ShieldCheck, Clock]
+const icons = [Trophy, ClipboardCheck, ShieldCheck, Clock]
 
 export default function Stats() {
   return (

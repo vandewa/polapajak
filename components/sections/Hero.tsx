@@ -19,11 +19,11 @@ function CheckChip() {
 
 export default function Hero() {
   return (
-    <section id="beranda" className="relative pt-24 lg:pt-28 pb-12 lg:pb-20 overflow-hidden">
+    <section id="beranda" className="relative pt-20 lg:pt-24 pb-8 lg:pb-10 overflow-hidden">
       {/* Right-bleed photo (desktop only) — blended with mask gradient */}
       <div
         className="hidden lg:block absolute top-0 right-0 bottom-0 pointer-events-none"
-        style={{ width: '54vw', maxWidth: 980 }}
+        style={{ width: '60vw', maxWidth: 1100 }}
       >
         <div
           className="relative h-full"
@@ -48,12 +48,12 @@ export default function Hero() {
           />
         </div>
         {/* Floating card outside the masked container so it stays crisp */}
-        <FloatingCard className="absolute bottom-10 left-0 xl:left-2 pointer-events-auto" />
+        <FloatingCard className="absolute top-1/2 -translate-y-1/2 right-12 xl:right-24 pointer-events-auto" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 lg:gap-10">
-        <div className="py-4 lg:py-16 fade-in-up">
-          <span className="eyebrow block">Konsultan Pajak &amp; Akuntansi</span>
+        <div className="py-4 lg:py-8 fade-in-up">
+          <span className="eyebrow block">Konsultasi Pajak, Akuntansi, dan Audit</span>
 
           <h1
             className="mt-5 font-extrabold tracking-tight"
@@ -102,8 +102,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mobile-only photo (desktop uses the absolute bleed above) */}
-        <div className="lg:hidden mt-6 relative">
+        {/* Tablet-only photo (mobile hides; desktop uses the absolute bleed above) */}
+        <div className="hidden md:block lg:hidden mt-6 relative">
           <div
             className="relative rounded-2xl overflow-hidden"
             style={{
