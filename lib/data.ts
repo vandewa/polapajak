@@ -1,7 +1,7 @@
 export const WA_NUMBER = '6281513050035'
 export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Saya%20ingin%20konsultasi%20pajak%2C%20akuntansi%2C%20dan%20audit`
 export const PHONE_DISPLAY = '+62 815-1305-0035'
-export const EMAIL = 'info@polapajak.id'
+export const EMAIL = 'polapajak.id@gmail.com'
 export const ADDRESS = 'Jl. Dirgantara Raya, Arcadia Residence No. B8, Jatiasih, Bekasi 17426'
 export const INSTAGRAM_URL = 'https://www.instagram.com/polapajak.id?igsh=MWJkb3Z3aWx0Zm85dg=='
 
@@ -22,8 +22,8 @@ export const heroChips = [
 export type LayananDetail = {
   tagline: string
   description: string
-  features: { title: string; desc: string }[]
-  deliverables: string[]
+  benefits: string[]
+  itemDetails: { name: string; desc: string }[]
   idealFor: string[]
 }
 
@@ -45,17 +45,17 @@ export const layananData: Layanan[] = [
       tagline: 'Strategi pajak yang efisien, taat regulasi, dan minim risiko.',
       description:
         'Mitra konsultasi pajak yang membantu Anda menyusun strategi end-to-end — dari perencanaan, review berkala, hingga advisory atas perubahan regulasi terkini. Kami merancang skema yang optimal secara fiskal namun tetap berada dalam koridor compliance.',
-      features: [
-        { title: 'Perencanaan Pajak Strategis', desc: 'Optimasi beban pajak dalam koridor regulasi yang aman.' },
-        { title: 'Review Pajak Komprehensif', desc: 'Tax health check untuk identifikasi risiko & peluang.' },
-        { title: 'Advisory Real-Time', desc: 'Konsultasi reguler atas regulasi & putusan terbaru.' },
-        { title: 'Mitigasi Sengketa', desc: 'Strategi preventif sebelum masalah muncul.' },
+      benefits: [
+        'Strategi sesuai profil & industri bisnis Anda',
+        'Penghematan pajak optimal dalam koridor regulasi',
+        'Mitigasi risiko sengketa & sanksi DJP',
+        'Didukung tim berpengalaman 15+ tahun',
       ],
-      deliverables: [
-        'Tax Planning Document',
-        'Risk Assessment Report',
-        'Advisory Memo Bulanan',
-        'Update Regulasi Berkala',
+      itemDetails: [
+        { name: 'Perencanaan Pajak Strategis', desc: 'Kami susun struktur pajak yang efisien dan aman, sehingga Anda dapat menghemat beban pajak tanpa keluar dari koridor regulasi.' },
+        { name: 'Review Pajak Komprehensif', desc: 'Lewat tax health check menyeluruh, kami identifikasi celah risiko maupun peluang penghematan yang sering luput dari radar internal Anda.' },
+        { name: 'Advisory Real-Time', desc: 'Setiap perubahan regulasi dan putusan terbaru langsung kami terjemahkan menjadi langkah praktis — Anda tidak perlu memantau DJP setiap hari.' },
+        { name: 'Mitigasi Sengketa', desc: 'Kami petakan titik rawan sejak awal agar potensi sengketa dicegah jauh sebelum berkembang menjadi masalah serius.' },
       ],
       idealFor: ['Perusahaan Menengah–Besar', 'UMKM Berkembang', 'PMA / Multinasional'],
     },
@@ -69,17 +69,17 @@ export const layananData: Layanan[] = [
       tagline: 'Pelaporan bulanan tepat waktu, perhitungan akurat — tanpa drama deadline.',
       description:
         'Kelola seluruh kewajiban pajak rutin Anda — PPh 25, PPh 23, PPh 4 ayat (2), PPN, dan PPh Final — dengan workflow yang terstruktur. Kami pastikan e-SPT, e-Faktur, dan e-Bupot tersubmit sebelum deadline DJP, dengan dokumentasi lengkap untuk audit trail.',
-      features: [
-        { title: 'PPh Pasal 25 / 29', desc: 'Angsuran bulanan & PPh terutang akhir tahun.' },
-        { title: 'PPh 23 & PPh 4(2)', desc: 'Pemotongan tepat klasifikasi & e-Bupot.' },
-        { title: 'PPN & e-Faktur', desc: 'Faktur Pajak digital + validasi otomatis DJP.' },
-        { title: 'Adaptasi Coretax', desc: 'Migrasi & operasional di sistem perpajakan terbaru.' },
+      benefits: [
+        'Pelaporan tepat waktu — bebas denda keterlambatan',
+        'Perhitungan akurat sesuai ketentuan terbaru',
+        'Workflow terstruktur dengan reminder deadline',
+        'Adaptif terhadap sistem Coretax DJP',
       ],
-      deliverables: [
-        'Bukti Setor Pajak (BPN)',
-        'SPT Masa PPh & PPN',
-        'Faktur Pajak Output / Input',
-        'Laporan Rekonsiliasi PPN',
+      itemDetails: [
+        { name: 'PPh Pasal 25 / 29', desc: 'Angsuran bulanan dan PPh terutang akhir tahun kami hitung tepat sasaran, sehingga tidak ada kejutan saat tutup buku tahunan.' },
+        { name: 'PPh 23 & PPh 4(2)', desc: 'Pemotongan sesuai klasifikasi yang benar lengkap dengan e-Bupot — bukti potong rapi, terdokumentasi, dan siap diaudit kapan saja.' },
+        { name: 'PPN & e-Faktur', desc: 'Faktur Pajak digital diterbitkan dan tervalidasi otomatis ke DJP — meminimalkan risiko tolakan dan menjaga arus kas Anda tetap lancar.' },
+        { name: 'Adaptasi Coretax', desc: 'Tim kami sudah terbiasa dengan sistem Coretax DJP terbaru, jadi transisi maupun operasional Anda tetap berjalan mulus tanpa kebingungan teknis.' },
       ],
       idealFor: ['PT / CV Aktif', 'PKP & Non-PKP', 'PMA / PMDN'],
     },
@@ -93,17 +93,17 @@ export const layananData: Layanan[] = [
       tagline: 'Catatan keuangan yang rapi, terstandar, dan siap diaudit kapan saja.',
       description:
         'Pencatatan transaksi sesuai SAK ETAP/PSAK dengan workflow modern: input mingguan, rekonsiliasi bank otomatis, jurnal terstruktur, dan ledger lengkap. Anda fokus ke bisnis, kami yang menjaga buku Anda tetap auditable.',
-      features: [
-        { title: 'Pencatatan Berkala', desc: 'Input transaksi mingguan, bukan akhir bulan.' },
-        { title: 'Rekonsiliasi Bank', desc: 'Cocokan saldo otomatis & deteksi diskrepansi.' },
-        { title: 'Software Industri', desc: 'Accurate, Xero, atau MYOB — sesuai preferensi Anda.' },
-        { title: 'Cloud & Backup', desc: 'Data terenkripsi, akses real-time 24/7.' },
+      benefits: [
+        'Buku rapi dan auditable kapan saja',
+        'Sesuai standar SAK ETAP / PSAK terkini',
+        'Akses laporan real-time via cloud',
+        'Software industri (Accurate, Xero, MYOB)',
       ],
-      deliverables: [
-        'Buku Besar (General Ledger)',
-        'Buku Pembantu (Subledger)',
-        'Laporan Rekonsiliasi Bulanan',
-        'Trial Balance Periode',
+      itemDetails: [
+        { name: 'Pencatatan Berkala', desc: 'Transaksi kami input secara mingguan, bukan menumpuk di akhir bulan — laporan keuangan Anda selalu terkini saat dibutuhkan.' },
+        { name: 'Rekonsiliasi Bank', desc: 'Saldo dicocokkan otomatis dan diskrepansi langsung kami tandai, sehingga buku Anda tetap akurat dan auditable kapan pun.' },
+        { name: 'Software Industri', desc: 'Kami fleksibel menggunakan Accurate, Xero, atau MYOB sesuai preferensi Anda — tidak perlu repot ganti sistem yang sudah berjalan.' },
+        { name: 'Cloud & Backup', desc: 'Data tersimpan terenkripsi di cloud dengan akses real-time 24/7 — Anda dapat memantau kondisi keuangan kapan saja, dari mana saja.' },
       ],
       idealFor: ['Startup & UMKM', 'Kantor Cabang', 'Perusahaan Tanpa Tim Akuntansi'],
     },
@@ -117,17 +117,17 @@ export const layananData: Layanan[] = [
       tagline: 'Insight bisnis yang akurat dan sesuai standar PSAK / SAK ETAP.',
       description:
         'Susun laporan keuangan profesional sebagai alat decision-making, bukan sekadar dokumen administratif. Kami menyajikan data finansial yang transparan, terstandar, dan siap untuk kepentingan bank, investor, atau audit eksternal.',
-      features: [
-        { title: 'Laporan Laba Rugi', desc: 'Profitabilitas per periode & per segmen bisnis.' },
-        { title: 'Neraca / Position', desc: 'Aset, liabilitas, dan ekuitas terstruktur.' },
-        { title: 'Arus Kas', desc: 'Operasi, investasi, pendanaan dengan metode direct / indirect.' },
-        { title: 'Catatan / CALK', desc: 'Notes lengkap dengan rincian per akun signifikan.' },
+      benefits: [
+        'Format profesional siap untuk bank & investor',
+        'Sesuai standar PSAK / SAK ETAP',
+        'Insight bisnis untuk decision-making',
+        'Siap audit eksternal tanpa drama',
       ],
-      deliverables: [
-        'Laporan Laba Rugi Komprehensif',
-        'Statement of Financial Position',
-        'Laporan Arus Kas',
-        'Catatan atas Laporan Keuangan',
+      itemDetails: [
+        { name: 'Laporan Laba Rugi', desc: 'Profitabilitas per periode maupun per segmen bisnis kami sajikan jelas — Anda tahu persis dari mana laba terbaik datang dan area mana yang perlu diperbaiki.' },
+        { name: 'Neraca / Position', desc: 'Aset, liabilitas, dan ekuitas tersusun rapi sesuai standar PSAK — siap dipresentasikan ke bank, investor, maupun auditor eksternal kapan saja.' },
+        { name: 'Arus Kas', desc: 'Laporan arus kas operasi, investasi, dan pendanaan kami susun lengkap, sehingga Anda paham betul ke mana setiap rupiah bisnis Anda mengalir.' },
+        { name: 'Catatan / CALK', desc: 'Catatan atas laporan keuangan kami lengkapi dengan rincian akun signifikan — laporan Anda bukan hanya rapi, tetapi juga transparan dan kredibel di mata pengambil keputusan.' },
       ],
       idealFor: ['Pelaporan ke Bank / Investor', 'Persiapan Audit', 'Internal Management'],
     },
@@ -141,17 +141,17 @@ export const layananData: Layanan[] = [
       tagline: 'Penggajian aman, akurat, dan slip digital langsung ke karyawan.',
       description:
         'Sistem payroll end-to-end: perhitungan gaji bulanan, PPh 21 per karyawan dengan TER terbaru, BPJS Ketenagakerjaan & Kesehatan, hingga distribusi slip gaji digital. Confidential, accurate, on time — setiap bulan.',
-      features: [
-        { title: 'Perhitungan Otomatis', desc: 'Gaji pokok, tunjangan, lembur, bonus, potongan.' },
-        { title: 'PPh 21 Per Karyawan', desc: 'Sesuai TER & PTKP regulasi terbaru.' },
-        { title: 'BPJS Integration', desc: 'Setoran 2 program + sinkronisasi data karyawan.' },
-        { title: 'Slip Gaji Digital', desc: 'Email langsung atau via portal karyawan.' },
+      benefits: [
+        'Confidential & accurate setiap bulan',
+        'PPh 21 sesuai TER & PTKP terbaru',
+        'BPJS Kesehatan & Ketenagakerjaan terintegrasi',
+        'Slip gaji digital langsung ke karyawan',
       ],
-      deliverables: [
-        'Daftar Gaji Bulanan',
-        'Bukti Potong 1721-A1 Tahunan',
-        'Bukti Setor BPJS',
-        'Slip Gaji Per Karyawan',
+      itemDetails: [
+        { name: 'Perhitungan Otomatis', desc: 'Gaji pokok, tunjangan, lembur, bonus, dan potongan kami hitung otomatis dan akurat — tidak ada lagi salah hitung yang berpotensi memicu komplain karyawan.' },
+        { name: 'PPh 21 Per Karyawan', desc: 'Perhitungan PPh 21 selalu mengikuti TER dan PTKP regulasi terbaru, sehingga Anda dan karyawan sama-sama tenang soal pajak penghasilan.' },
+        { name: 'BPJS Integration', desc: 'Setoran BPJS Kesehatan dan Ketenagakerjaan beres tepat waktu setiap bulan, lengkap dengan sinkronisasi data karyawan tanpa membebani tim Anda.' },
+        { name: 'Slip Gaji Digital', desc: 'Slip gaji dikirim langsung ke email atau portal karyawan — profesional, paperless, dan kerahasiaan data tetap terjaga.' },
       ],
       idealFor: ['Perusahaan 5–500+ Karyawan', 'Multi-Cabang', 'Outsourcing Friendly'],
     },
@@ -160,24 +160,24 @@ export const layananData: Layanan[] = [
     id: 'compliance',
     title: 'Compliance & Lainnya',
     icon: 'ClipboardList',
-    items: ['SPT Tahunan Badan', 'SPT Tahunan Pribadi', 'Pendampingan Pemeriksaan'],
+    items: ['SPT Tahunan Badan', 'SPT Tahunan Pribadi', 'SP2DK & Pemeriksaan'],
     detail: {
-      tagline: 'Compliance menyeluruh — dari pelaporan rutin sampai kasus spesial.',
+      tagline: 'Compliance menyeluruh — dari pelaporan rutin sampai upaya hukum perpajakan.',
       description:
-        'Layanan kepatuhan lengkap: SPT Tahunan Badan & Pribadi, pendampingan pemeriksaan pajak (tax audit), penyusunan dokumen sengketa, hingga asistensi atas berbagai isu administrasi perpajakan yang membutuhkan perhatian khusus.',
-      features: [
-        { title: 'SPT Tahunan Badan', desc: '1771 + seluruh lampiran sesuai jenis usaha.' },
-        { title: 'SPT Tahunan Pribadi', desc: '1770 / 1770S / 1770SS untuk pemilik & direksi.' },
-        { title: 'Pendampingan Pemeriksaan', desc: 'Tax audit defense end-to-end & komunikasi DJP.' },
-        { title: 'Sengketa & Banding', desc: 'Keberatan, banding, hingga peninjauan kembali.' },
+        'Layanan kepatuhan lengkap: SPT Tahunan Badan dan Pribadi, pendampingan SP2DK dan pemeriksaan pajak, hingga upaya hukum sengketa, banding, dan restitusi PPN/PPh. Kami siapkan dokumen, strategi, dan pendampingan langsung dengan DJP maupun Pengadilan Pajak — agar kasus tuntas, risiko terukur, dan hak Anda sebagai wajib pajak tetap terjaga.',
+      benefits: [
+        'Pendampingan ahli sepanjang proses',
+        'Pengalaman puluhan kasus SP2DK & pemeriksaan',
+        'Strategi sengketa berbasis yurisprudensi terbaru',
+        'Komunikasi DJP yang efektif & profesional',
       ],
-      deliverables: [
-        'SPT Tahunan & Bukti e-Filing',
-        'Tax Audit Working Paper',
-        'Letter of Response / Tanggapan',
-        'Compliance Calendar Tahunan',
+      itemDetails: [
+        { name: 'SPT Tahunan Badan', desc: 'Kami susun SPT 1771 lengkap dengan seluruh lampiran sesuai jenis usaha Anda — laporan rapi, tepat waktu, dan minim risiko temuan dari DJP.' },
+        { name: 'SPT Tahunan Pribadi', desc: 'SPT 1770/1770S/1770SS untuk pemilik dan direksi kami urus tuntas, sehingga compliance pribadi Anda sejalan dengan compliance perusahaan.' },
+        { name: 'Pendampingan, SP2DK, dan Pemeriksaan', desc: 'Begitu Anda menerima SP2DK atau surat pemeriksaan, kami langsung dampingi — telaah substansi, susun tanggapan, siapkan dokumen pendukung, hingga hadir bersama Anda di setiap interaksi dengan DJP.' },
+        { name: 'Sengketa, Banding, dan Restitusi', desc: 'Saat hasil pemeriksaan tidak sesuai atau Anda berhak atas restitusi, kami bawa kasus melalui keberatan, banding di Pengadilan Pajak, hingga PK di MA — argumentasi kuat berbasis yurisprudensi terbaru, restitusi cepat sampai terbit SKPLB.' },
       ],
-      idealFor: ['Annual Compliance', 'Persiapan Pemeriksaan', 'Penyelesaian Kasus Pajak'],
+      idealFor: ['Annual Compliance', 'Pendamping SP2DK & Pemeriksaan', 'Penyelesaian Sengketa & Restitusi'],
     },
   },
 ]

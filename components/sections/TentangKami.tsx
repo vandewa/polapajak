@@ -72,7 +72,7 @@ export default function TentangKami() {
                 letterSpacing: '-0.01em',
               }}
             >
-              Mengapa Memilih<br />PolaPajak Consulting?
+              Mengapa Memilih<br />Polapajak Consulting?
             </h2>
             <p
               className="mt-4 leading-relaxed"
@@ -116,7 +116,7 @@ export default function TentangKami() {
           >
             <Image
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=85&auto=format&fit=crop"
-              alt="Tim PolaPajak Consulting bekerja bersama"
+              alt="Tim Polapajak Consulting bekerja bersama"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="object-cover"

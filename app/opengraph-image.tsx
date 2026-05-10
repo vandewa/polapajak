@@ -1,10 +1,18 @@
 import { ImageResponse } from 'next/og'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 
-export const alt = 'PolaPajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit'
+export const alt = 'Polapajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function Image() {
+  const logoSvg = readFileSync(
+    join(process.cwd(), 'public', 'LM_White_BG_1.svg'),
+    'utf8',
+  )
+  const logoDataUrl = `data:image/svg+xml;base64,${Buffer.from(logoSvg).toString('base64')}`
+
   return new ImageResponse(
     (
       <div
@@ -52,24 +60,25 @@ export default async function Image() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 14,
-              background: 'rgba(255,255,255,0.16)',
-              border: '1px solid rgba(255,255,255,0.30)',
+              width: 80,
+              height: 80,
+              borderRadius: 16,
+              overflow: 'hidden',
               display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 36,
-              fontWeight: 800,
-              letterSpacing: '-0.02em',
+              boxShadow: '0 8px 24px rgba(6,58,34,0.35)',
             }}
           >
-            P
+            <img
+              src={logoDataUrl}
+              alt="Polapajak"
+              width={80}
+              height={80}
+              style={{ objectFit: 'cover' }}
+            />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span style={{ fontSize: 26, fontWeight: 800, letterSpacing: '-0.01em' }}>
-              polapajak<span style={{ color: '#86EFAC' }}>.id</span>
+              Polapajak<span style={{ color: '#86EFAC' }}>.id</span>
             </span>
             <span
               style={{
@@ -147,7 +156,7 @@ export default async function Image() {
           </span>
           <span style={{ color: 'rgba(255,255,255,0.4)' }}>•</span>
           <span style={{ fontSize: 18, fontWeight: 700, color: '#fff' }}>
-            polapajak.id
+            Polapajak.id
           </span>
         </div>
       </div>

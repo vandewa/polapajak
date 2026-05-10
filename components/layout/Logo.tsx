@@ -11,18 +11,14 @@ export default function Logo({ variant = 'light' }: LogoProps) {
     <div className="flex items-center gap-2.5">
       <div
         className="relative shrink-0 rounded-lg overflow-hidden"
-        style={{
-          width: '38px',
-          height: '38px',
-          background: isLight ? '#16A34A' : 'transparent',
-        }}
+        style={{ width: '40px', height: '40px' }}
       >
         <Image
-          src="/logo-icon.png"
-          alt="PolaPajak icon"
+          src="/LM_White_BG_1.svg"
+          alt="Polapajak icon"
           fill
+          sizes="40px"
           className="object-cover"
-          style={{ mixBlendMode: 'screen' }}
           priority
         />
       </div>
@@ -36,7 +32,7 @@ export default function Logo({ variant = 'light' }: LogoProps) {
             lineHeight: 1.1,
           }}
         >
-          polapajak
+          Polapajak
           <span style={{ color: '#16A34A', fontWeight: 700 }}>.id</span>
         </span>
         <span

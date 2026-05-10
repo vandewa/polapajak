@@ -39,7 +39,7 @@ export default function Hero() {
         >
           <Image
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=85&auto=format&fit=crop"
-            alt="Dashboard pajak dan keuangan PolaPajak"
+            alt="Dashboard pajak dan keuangan Polapajak"
             fill
             priority
             sizes="55vw"
@@ -114,7 +114,7 @@ export default function Hero() {
           >
             <Image
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1100&q=85&auto=format&fit=crop"
-              alt="Dashboard pajak dan keuangan PolaPajak"
+              alt="Dashboard pajak dan keuangan Polapajak"
               fill
               sizes="100vw"
               className="object-cover"

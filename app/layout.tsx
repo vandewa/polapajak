@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 const SITE_URL = 'https://polapajak.id'
-const SITE_NAME = 'PolaPajak Consulting'
-const TITLE = 'PolaPajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit Terpercaya'
+const SITE_NAME = 'Polapajak Consulting'
+const TITLE = 'Polapajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit Terpercaya'
 const DESCRIPTION =
   'Konsultan pajak, akuntansi, dan audit terpercaya di Indonesia. Solusi perencanaan pajak, pembukuan, laporan keuangan, payroll, dan compliance untuk bisnis yang ingin tumbuh sehat dan patuh regulasi.'
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: TITLE,
-    template: '%s | PolaPajak Consulting',
+    template: '%s | Polapajak Consulting',
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     'tax compliance',
     'payroll',
     'compliance pajak',
-    'PolaPajak',
-    'PolaPajak Consulting',
+    'Polapajak',
+    'Polapajak Consulting',
     'konsultan pajak Bekasi',
     'konsultan pajak Jabodetabek',
   ],
@@ -92,9 +92,9 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   '@id': `${SITE_URL}/#organization`,
   name: SITE_NAME,
-  legalName: 'PT PolaPajak Consulting',
+  legalName: 'PT Polapajak Consulting',
   url: SITE_URL,
-  logo: `${SITE_URL}/icon.png`,
+  logo: `${SITE_URL}/icon.svg`,
   image: `${SITE_URL}/opengraph-image`,
   description: DESCRIPTION,
   priceRange: '$$',
@@ -116,7 +116,7 @@ const jsonLd = {
       availableLanguage: ['id', 'en'],
     },
   ],
-  email: 'info@polapajak.id',
+  email: 'polapajak.id@gmail.com',
   sameAs: [
     'https://www.instagram.com/polapajak.id',
   ],
@@ -132,7 +132,7 @@ const jsonLd = {
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Layanan PolaPajak Consulting',
+    name: 'Layanan Polapajak Consulting',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Konsultasi Pajak' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pajak Bulanan' } },

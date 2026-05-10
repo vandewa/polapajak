@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X, Check, ArrowRight, Sparkles, Target, Package } from 'lucide-react'
+import { X, Check, ArrowRight, Sparkles, ShieldCheck, ListChecks } from 'lucide-react'
 import type { ComponentType } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { WA_LINK, type Layanan } from '@/lib/data'
@@ -129,7 +129,7 @@ export default function LayananModal({ service, Icon, onClose }: Props) {
                     }}
                   >
                     <Sparkles size={11} />
-                    Layanan PolaPajak
+                    Layanan Polapajak
                   </span>
                   <h2
                     className="font-extrabold leading-tight"
@@ -182,83 +182,61 @@ export default function LayananModal({ service, Icon, onClose }: Props) {
                 {service.detail.description}
               </p>
 
-              {/* Features grid */}
+              {/* Mengapa memilih kami */}
               <div className="mt-7">
-                <SectionLabel icon={<Target size={14} />} text="Yang Kami Kerjakan" />
-                <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {service.detail.features.map((f) => (
+                <SectionLabel icon={<ShieldCheck size={14} />} text="Mengapa Memilih Kami" />
+                <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {service.detail.benefits.map((b) => (
+                    <li
+                      key={b}
+                      className="flex items-start gap-2.5"
+                      style={{ color: '#334155', fontSize: 13.5, lineHeight: 1.5 }}
+                    >
+                      <span
+                        className="mt-0.5 shrink-0 rounded-full flex items-center justify-center"
+                        style={{
+                          width: 20,
+                          height: 20,
+                          background: '#F0FDF4',
+                          color: '#15803D',
+                          border: '1px solid rgba(21,128,61,0.18)',
+                        }}
+                      >
+                        <Check size={12} strokeWidth={3} />
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Yang kami tangani */}
+              <div className="mt-7">
+                <SectionLabel icon={<ListChecks size={14} />} text="Yang Kami Tangani" />
+                <div className="mt-3 flex flex-col gap-2.5">
+                  {service.detail.itemDetails.map((d) => (
                     <div
-                      key={f.title}
-                      className="rounded-xl p-4 transition-all"
+                      key={d.name}
+                      className="rounded-xl px-4 py-3.5 transition-colors"
                       style={{
-                        background:
-                          'linear-gradient(135deg, #F8FAFC 0%, #F0FDF4 100%)',
-                        border: '1px solid #E2E8F0',
+                        background: '#F8FAFC',
+                        border: '1px solid #EFF2F5',
                       }}
                     >
-                      <div className="flex items-start gap-2.5">
-                        <span
-                          className="rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                          style={{
-                            width: 22,
-                            height: 22,
-                            background:
-                              'linear-gradient(135deg, #15803D, #22C55E)',
-                            boxShadow: '0 4px 10px rgba(21,128,61,0.30)',
-                          }}
-                        >
-                          <Check size={12} color="#fff" strokeWidth={3.2} />
-                        </span>
-                        <div className="min-w-0">
-                          <div
-                            className="font-bold mb-0.5"
-                            style={{ color: '#0F172A', fontSize: 13.5 }}
-                          >
-                            {f.title}
-                          </div>
-                          <div
-                            style={{ color: '#64748B', fontSize: 12.5, lineHeight: 1.5 }}
-                          >
-                            {f.desc}
-                          </div>
-                        </div>
+                      <div
+                        className="font-bold mb-0.5"
+                        style={{ color: '#0F172A', fontSize: 13.5 }}
+                      >
+                        {d.name}
+                      </div>
+                      <div
+                        style={{ color: '#64748B', fontSize: 12.5, lineHeight: 1.55 }}
+                      >
+                        {d.desc}
                       </div>
                     </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Deliverables */}
-              <div className="mt-7">
-                <SectionLabel icon={<Package size={14} />} text="Output / Deliverables" />
-                <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {service.detail.deliverables.map((d) => (
-                    <li
-                      key={d}
-                      className="flex items-center gap-2.5 rounded-lg px-3 py-2.5"
-                      style={{
-                        background: '#F8FAFC',
-                        border: '1px solid #EFF2F5',
-                        color: '#1E293B',
-                        fontSize: 13.5,
-                        fontWeight: 500,
-                      }}
-                    >
-                      <span
-                        aria-hidden
-                        className="rounded-full"
-                        style={{
-                          width: 6,
-                          height: 6,
-                          background:
-                            'linear-gradient(135deg, #15803D, #22C55E)',
-                          boxShadow: '0 0 0 3px rgba(34,197,94,0.18)',
-                        }}
-                      />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               {/* Ideal for */}
@@ -294,25 +272,15 @@ export default function LayananModal({ service, Icon, onClose }: Props) {
               <div className="text-[13px]" style={{ color: '#64748B' }}>
                 Diskusi singkat 15 menit untuk memetakan kebutuhan Anda.
               </div>
-              <div className="flex gap-2.5">
-                <button
-                  type="button"
-                  onClick={onClose}
-                  className="btn-ghost"
-                  style={{ padding: '0.7rem 1.1rem', fontSize: 13.5 }}
-                >
-                  Tutup
-                </button>
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                  style={{ padding: '0.7rem 1.1rem', fontSize: 13.5 }}
-                >
-                  Konsultasi Sekarang <ArrowRight size={15} />
-                </a>
-              </div>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ padding: '0.7rem 1.1rem', fontSize: 13.5 }}
+              >
+                Konsultasi Gratis Sekarang <ArrowRight size={15} />
+              </a>
             </div>
           </motion.div>
         </motion.div>

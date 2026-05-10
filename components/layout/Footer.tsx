@@ -140,20 +140,20 @@ export default function Footer() {
           style={{ color: '#94A3B8' }}
         >
           <p suppressHydrationWarning>
-            © {new Date().getFullYear()} PolaPajak Consulting. All rights reserved.
+            © {new Date().getFullYear()} Polapajak Consulting. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5">
             <span>Part of</span>
             <div
-              className="relative rounded overflow-hidden shrink-0"
-              style={{ width: 14, height: 14, background: '#16A34A' }}
+              className="relative rounded shrink-0 overflow-hidden"
+              style={{ width: 16, height: 16 }}
             >
               <Image
-                src="/logo-icon.png"
+                src="/LM_White_BG_1.svg"
                 alt=""
                 fill
+                sizes="16px"
                 className="object-cover"
-                style={{ mixBlendMode: 'screen' }}
               />
             </div>
             <span className="font-semibold" style={{ color: '#FFFFFF' }}>Pola Group</span>

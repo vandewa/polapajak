@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 import { navLinks, WA_LINK } from '@/lib/data'
 import Logo from '@/components/layout/Logo'
 
@@ -27,10 +27,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between h-[68px]">
-          <a href="#beranda" aria-label="PolaPajak"><Logo /></a>
+          <a href="#beranda" aria-label="Polapajak"><Logo /></a>
 
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((l, i) => (
+            {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -40,7 +40,6 @@ export default function Navbar() {
                 onMouseLeave={(e) => (e.currentTarget.style.color = '#475569')}
               >
                 {l.label}
-                {i === 1 && <ChevronDown size={14} />}
               </a>
             ))}
           </nav>
