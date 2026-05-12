@@ -3,7 +3,7 @@ export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Saya%20ingin%20konsultas
 export const PHONE_DISPLAY = '+62 815-1305-0035'
 export const EMAIL = 'polapajak.id@gmail.com'
 export const ADDRESS = 'Jl. Dirgantara Raya, Arcadia Residence No. B8, Jatiasih, Bekasi 17426'
-export const INSTAGRAM_URL = 'https://www.instagram.com/polapajak.id?igsh=MWJkb3Z3aWx0Zm85dg=='
+export const INSTAGRAM_URL = 'https://www.instagram.com/polapajak.id'
 
 export const navLinks = [
   { label: 'Beranda',     href: '#beranda' },
@@ -183,7 +183,7 @@ export const layananData: Layanan[] = [
 ]
 
 export const statsData = [
-  { value: '200',  suffix: '+', label: 'Klien Terpercaya',
+  { value: '200',  suffix: '+', label: 'Klien Percaya',
     description: 'Berbagai industri telah mempercayakan pengelolaan pajak & keuangannya kepada kami.' },
   { value: '500',  suffix: '+', label: 'Projek Selesai',
     description: 'Penugasan pajak, akuntansi, dan audit yang telah kami tuntaskan dengan baik.' },
