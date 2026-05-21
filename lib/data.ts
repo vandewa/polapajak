@@ -103,7 +103,6 @@ export const layananData: Layanan[] = [
         { name: 'Pencatatan Berkala', desc: 'Transaksi kami input secara mingguan, bukan menumpuk di akhir bulan — laporan keuangan Anda selalu terkini saat dibutuhkan.' },
         { name: 'Rekonsiliasi Bank', desc: 'Saldo dicocokkan otomatis dan diskrepansi langsung kami tandai, sehingga buku Anda tetap akurat dan auditable kapan pun.' },
         { name: 'Software Industri', desc: 'Kami fleksibel menggunakan Accurate, Xero, atau MYOB sesuai preferensi Anda — tidak perlu repot ganti sistem yang sudah berjalan.' },
-        { name: 'Cloud & Backup', desc: 'Data tersimpan terenkripsi di cloud dengan akses real-time 24/7 — Anda dapat memantau kondisi keuangan kapan saja, dari mana saja.' },
       ],
       idealFor: ['Startup & UMKM', 'Kantor Cabang', 'Perusahaan Tanpa Tim Akuntansi'],
     },

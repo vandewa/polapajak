@@ -52,7 +52,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <div className="mb-4"><Logo variant="dark" /></div>
             <p className="text-[13px] leading-relaxed max-w-[280px]" style={{ color: '#94A3B8' }}>
-              Konsultasi Pajak, Akuntansi, dan Audit terpercaya yang membantu bisnis Anda tumbuh
+              Konsultan Pajak, Akuntansi, dan Audit terpercaya yang membantu bisnis Anda tumbuh
               melalui pengelolaan keuangan yang sehat, patuh, dan terstruktur.
             </p>
           </div>

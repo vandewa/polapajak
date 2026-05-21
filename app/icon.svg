@@ -24,8 +24,11 @@
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="gray"/>
     </linearGradient>
+    <clipPath id="rounded-clip">
+      <rect width="418.83" height="418.83" rx="84" ry="84"/>
+    </clipPath>
   </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
+  <g id="Layer_1-2" data-name="Layer 1" clip-path="url(#rounded-clip)">
     <g>
       <rect class="cls-2" width="418.83" height="418.83"/>
       <g>

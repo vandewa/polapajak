@@ -3,7 +3,7 @@ import './globals.css'
 
 const SITE_URL = 'https://polapajak.id'
 const SITE_NAME = 'Polapajak Consulting'
-const TITLE = 'Polapajak Consulting — Konsultasi Pajak, Akuntansi, dan Audit Terpercaya'
+const TITLE = 'Polapajak Consulting — Konsultan Pajak, Akuntansi, dan Audit Terpercaya'
 const DESCRIPTION =
   'Konsultan pajak, akuntansi, dan audit terpercaya di Indonesia. Solusi perencanaan pajak, pembukuan, laporan keuangan, payroll, dan compliance untuk bisnis yang ingin tumbuh sehat dan patuh regulasi.'
 

@@ -53,7 +53,7 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 lg:gap-10">
         <div className="py-4 lg:py-8 fade-in-up">
-          <span className="eyebrow block">Konsultasi Pajak, Akuntansi, dan Audit</span>
+          <span className="eyebrow block">Konsultan Pajak, Akuntansi, dan Audit</span>
 
           <h1
             className="mt-5 font-extrabold tracking-tight"
