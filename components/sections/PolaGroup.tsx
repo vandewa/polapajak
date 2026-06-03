@@ -62,7 +62,7 @@ export default function PolaGroup() {
             Solusi Terintegrasi untuk Bisnis Anda
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto leading-relaxed text-sm lg:text-base">
-            Pajak, akuntansi, audit, dan compliance dalam satu ekosistem.
+            Pajak, akuntansi, dan compliance dalam satu ekosistem.
             <br className="hidden sm:block" />
             Dua brand, satu komitmen — siap mendampingi bisnis Anda dari fondasi hingga pertumbuhan.
           </p>
@@ -100,7 +100,7 @@ export default function PolaGroup() {
               Polapajak Consulting
             </p>
             <h3 className="font-extrabold text-gray-900 text-xl lg:text-2xl mb-3">
-              Pajak, Akuntansi, dan Audit
+              Pajak dan Akuntansi
             </h3>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
               Kelola pajak dan keuangan bisnis Anda bersama ahli — dari
@@ -123,7 +123,7 @@ export default function PolaGroup() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[#15803D]">•</span>
-                Audit, advisory &amp; pendampingan pemeriksaan
+                Advisory &amp; pendampingan pemeriksaan pajak
               </li>
             </ul>
           </motion.div>
@@ -226,7 +226,7 @@ export default function PolaGroup() {
             <p className="relative text-blue-50/90 text-sm leading-relaxed mb-5">
               Bangun fondasi compliance bisnis Anda — dari sertifikasi standar
               internasional, legalitas, perizinan, hingga sistem manajemen yang
-              siap audit.
+              siap sertifikasi.
             </p>
 
             <ul className="relative flex flex-col gap-2 text-sm text-blue-50/90 mb-7">
@@ -244,7 +244,7 @@ export default function PolaGroup() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-blue-200">•</span>
-                Sistem manajemen &amp; pendampingan audit
+                Sistem manajemen &amp; pendampingan sertifikasi
               </li>
             </ul>
 

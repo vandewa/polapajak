@@ -3,9 +3,9 @@ import './globals.css'
 
 const SITE_URL = 'https://polapajak.id'
 const SITE_NAME = 'Polapajak Consulting'
-const TITLE = 'Polapajak Consulting — Konsultan Pajak, Akuntansi, dan Audit Terpercaya'
+const TITLE = 'Polapajak Consulting — Konsultan Pajak dan Akuntansi Terpercaya'
 const DESCRIPTION =
-  'Konsultan pajak, akuntansi, dan audit terpercaya di Indonesia. Solusi perencanaan pajak, pembukuan, laporan keuangan, payroll, dan compliance untuk bisnis yang ingin tumbuh sehat dan patuh regulasi.'
+  'Konsultan pajak dan akuntansi terpercaya di Indonesia. Solusi perencanaan pajak, pembukuan, laporan keuangan, payroll, dan compliance untuk bisnis yang ingin tumbuh sehat dan patuh regulasi.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     'konsultasi pajak',
     'konsultan pajak',
     'jasa akuntansi',
-    'jasa audit',
     'pembukuan',
     'laporan keuangan',
     'PPh',
@@ -125,7 +124,6 @@ const jsonLd = {
     'Tax Planning',
     'Tax Compliance',
     'Accounting',
-    'Audit',
     'Bookkeeping',
     'Financial Reporting',
     'Payroll',
@@ -139,7 +137,7 @@ const jsonLd = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Pembukuan' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Laporan Keuangan' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Payroll' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compliance & Audit' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Compliance & Lainnya' } },
     ],
   },
 }

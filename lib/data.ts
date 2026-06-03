@@ -1,5 +1,5 @@
 export const WA_NUMBER = '6281513050035'
-export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Saya%20ingin%20konsultasi%20pajak%2C%20akuntansi%2C%20dan%20audit`
+export const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Saya%20ingin%20konsultasi%20pajak%20dan%20akuntansi`
 export const PHONE_DISPLAY = '+62 815-1305-0035'
 export const EMAIL = 'polapajak.id@gmail.com'
 export const ADDRESS = 'Jl. Dirgantara Raya, Arcadia Residence No. B8, Jatiasih, Bekasi 17426'
@@ -68,7 +68,7 @@ export const layananData: Layanan[] = [
     detail: {
       tagline: 'Pelaporan bulanan tepat waktu, perhitungan akurat — tanpa drama deadline.',
       description:
-        'Kelola seluruh kewajiban pajak rutin Anda — PPh 25, PPh 23, PPh 4 ayat (2), PPN, dan PPh Final — dengan workflow yang terstruktur. Kami pastikan e-SPT, e-Faktur, dan e-Bupot tersubmit sebelum deadline DJP, dengan dokumentasi lengkap untuk audit trail.',
+        'Kelola seluruh kewajiban pajak rutin Anda — PPh 25, PPh 23, PPh 4 ayat (2), PPN, dan PPh Final — dengan workflow yang terstruktur. Kami pastikan e-SPT, e-Faktur, dan e-Bupot tersubmit sebelum deadline DJP, dengan dokumentasi lengkap dan rekam jejak transaksi.',
       benefits: [
         'Pelaporan tepat waktu — bebas denda keterlambatan',
         'Perhitungan akurat sesuai ketentuan terbaru',
@@ -77,7 +77,7 @@ export const layananData: Layanan[] = [
       ],
       itemDetails: [
         { name: 'PPh Pasal 25 / 29', desc: 'Angsuran bulanan dan PPh terutang akhir tahun kami hitung tepat sasaran, sehingga tidak ada kejutan saat tutup buku tahunan.' },
-        { name: 'PPh 23 & PPh 4(2)', desc: 'Pemotongan sesuai klasifikasi yang benar lengkap dengan e-Bupot — bukti potong rapi, terdokumentasi, dan siap diaudit kapan saja.' },
+        { name: 'PPh 23 & PPh 4(2)', desc: 'Pemotongan sesuai klasifikasi yang benar lengkap dengan e-Bupot — bukti potong rapi, terdokumentasi, dan siap diperiksa kapan saja.' },
         { name: 'PPN & e-Faktur', desc: 'Faktur Pajak digital diterbitkan dan tervalidasi otomatis ke DJP — meminimalkan risiko tolakan dan menjaga arus kas Anda tetap lancar.' },
         { name: 'Adaptasi Coretax', desc: 'Tim kami sudah terbiasa dengan sistem Coretax DJP terbaru, jadi transisi maupun operasional Anda tetap berjalan mulus tanpa kebingungan teknis.' },
       ],
@@ -90,18 +90,18 @@ export const layananData: Layanan[] = [
     icon: 'BookOpen',
     items: ['Pencatatan Transaksi', 'Rekonsiliasi Bank', 'Jurnal & Ledger'],
     detail: {
-      tagline: 'Catatan keuangan yang rapi, terstandar, dan siap diaudit kapan saja.',
+      tagline: 'Catatan keuangan yang rapi, terstandar, dan siap diperiksa kapan saja.',
       description:
-        'Pencatatan transaksi sesuai SAK ETAP/PSAK dengan workflow modern: input mingguan, rekonsiliasi bank otomatis, jurnal terstruktur, dan ledger lengkap. Anda fokus ke bisnis, kami yang menjaga buku Anda tetap auditable.',
+        'Pencatatan transaksi sesuai SAK ETAP/PSAK dengan workflow modern: input mingguan, rekonsiliasi bank otomatis, jurnal terstruktur, dan ledger lengkap. Anda fokus ke bisnis, kami yang menjaga buku Anda tetap terstandar dan terverifikasi.',
       benefits: [
-        'Buku rapi dan auditable kapan saja',
+        'Buku rapi dan terstandar kapan saja',
         'Sesuai standar SAK ETAP / PSAK terkini',
         'Akses laporan real-time via cloud',
         'Software industri (Accurate, Xero, MYOB)',
       ],
       itemDetails: [
         { name: 'Pencatatan Berkala', desc: 'Transaksi kami input secara mingguan, bukan menumpuk di akhir bulan — laporan keuangan Anda selalu terkini saat dibutuhkan.' },
-        { name: 'Rekonsiliasi Bank', desc: 'Saldo dicocokkan otomatis dan diskrepansi langsung kami tandai, sehingga buku Anda tetap akurat dan auditable kapan pun.' },
+        { name: 'Rekonsiliasi Bank', desc: 'Saldo dicocokkan otomatis dan diskrepansi langsung kami tandai, sehingga buku Anda tetap akurat dan terverifikasi kapan pun.' },
         { name: 'Software Industri', desc: 'Kami fleksibel menggunakan Accurate, Xero, atau MYOB sesuai preferensi Anda — tidak perlu repot ganti sistem yang sudah berjalan.' },
       ],
       idealFor: ['Startup & UMKM', 'Kantor Cabang', 'Perusahaan Tanpa Tim Akuntansi'],
@@ -115,20 +115,20 @@ export const layananData: Layanan[] = [
     detail: {
       tagline: 'Insight bisnis yang akurat dan sesuai standar PSAK / SAK ETAP.',
       description:
-        'Susun laporan keuangan profesional sebagai alat decision-making, bukan sekadar dokumen administratif. Kami menyajikan data finansial yang transparan, terstandar, dan siap untuk kepentingan bank, investor, atau audit eksternal.',
+        'Susun laporan keuangan profesional sebagai alat decision-making, bukan sekadar dokumen administratif. Kami menyajikan data finansial yang transparan, terstandar, dan siap untuk kepentingan bank, investor, atau pemeriksaan eksternal.',
       benefits: [
         'Format profesional siap untuk bank & investor',
         'Sesuai standar PSAK / SAK ETAP',
         'Insight bisnis untuk decision-making',
-        'Siap audit eksternal tanpa drama',
+        'Siap pemeriksaan eksternal tanpa drama',
       ],
       itemDetails: [
         { name: 'Laporan Laba Rugi', desc: 'Profitabilitas per periode maupun per segmen bisnis kami sajikan jelas — Anda tahu persis dari mana laba terbaik datang dan area mana yang perlu diperbaiki.' },
-        { name: 'Neraca / Position', desc: 'Aset, liabilitas, dan ekuitas tersusun rapi sesuai standar PSAK — siap dipresentasikan ke bank, investor, maupun auditor eksternal kapan saja.' },
+        { name: 'Neraca / Position', desc: 'Aset, liabilitas, dan ekuitas tersusun rapi sesuai standar PSAK — siap dipresentasikan ke bank, investor, maupun pihak eksternal kapan saja.' },
         { name: 'Arus Kas', desc: 'Laporan arus kas operasi, investasi, dan pendanaan kami susun lengkap, sehingga Anda paham betul ke mana setiap rupiah bisnis Anda mengalir.' },
         { name: 'Catatan / CALK', desc: 'Catatan atas laporan keuangan kami lengkapi dengan rincian akun signifikan — laporan Anda bukan hanya rapi, tetapi juga transparan dan kredibel di mata pengambil keputusan.' },
       ],
-      idealFor: ['Pelaporan ke Bank / Investor', 'Persiapan Audit', 'Internal Management'],
+      idealFor: ['Pelaporan ke Bank / Investor', 'Persiapan Pemeriksaan', 'Internal Management'],
     },
   },
   {
@@ -185,7 +185,7 @@ export const statsData = [
   { value: '200',  suffix: '+', label: 'Klien Percaya',
     description: 'Berbagai industri telah mempercayakan pengelolaan pajak & keuangannya kepada kami.' },
   { value: '500',  suffix: '+', label: 'Projek Selesai',
-    description: 'Penugasan pajak, akuntansi, dan audit yang telah kami tuntaskan dengan baik.' },
+    description: 'Penugasan pajak dan akuntansi yang telah kami tuntaskan dengan baik.' },
   { value: '100',  suffix: '%', label: 'Tingkat Kepatuhan',
     description: 'Laporan tepat waktu, akurat, dan sesuai regulasi perpajakan.' },
   { value: '15',   suffix: '+', label: 'Tahun Pengalaman',

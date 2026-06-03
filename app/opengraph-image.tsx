@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
-export const alt = 'Polapajak Consulting — Konsultan Pajak, Akuntansi, dan Audit'
+export const alt = 'Polapajak Consulting — Konsultan Pajak dan Akuntansi'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -105,7 +105,7 @@ export default async function Image() {
               color: '#86EFAC',
             }}
           >
-            Konsultan Pajak, Akuntansi, dan Audit
+            Konsultan Pajak dan Akuntansi
           </span>
           <h1
             style={{
